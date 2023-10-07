@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-
+import logo from '../../assets/logo/logo.webp';
 const Navbar = () => {
   const navOptions = (
     <>
@@ -72,16 +72,11 @@ const Navbar = () => {
             {navOptions}
           </ul>
         </div>
-        <img
-          //   src={logo}
-          className="w-16 h-12 object-cover object-center rounded"
-          alt="logo"
-        />
         <Link
-          //   to="/"
+            to="/"
           className="btn btn-ghost normal-case text-sm lg:text-2xl"
         >
-          LinguaLodge
+         <img src={logo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
