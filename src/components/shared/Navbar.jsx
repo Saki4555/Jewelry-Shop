@@ -84,6 +84,7 @@ const Navbar = () => {
       </div>
       {/* drop down */}
       <div className="navbar-end">
+        <button className="px-5 py-2 rounded-full btn-1 text-white hover:bg-black">Login</button>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-16 rounded-full">
