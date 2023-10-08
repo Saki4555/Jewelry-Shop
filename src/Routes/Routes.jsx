@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
+import AllJewelry from "../Pages/AllJewelry";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <Signup></Signup>,
       },
+      {
+        path: '/all-jewelries',
+        element: <AllJewelry></AllJewelry>
+      }
     ],
   },
 ]);

@@ -1,7 +1,6 @@
 import MyContainer from "../shared/MyContainer";
 
 const HomeSliderContent = ({ img, text }) => {
-  console.log(text);
   return (
     <div>
       <div

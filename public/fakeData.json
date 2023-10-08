@@ -1,0 +1,76 @@
+[
+    {
+      "name": "Diamond Studs",
+      "brandName": "Brilliant Earth", 
+      "price": 299.99,
+      "category": "Earrings",
+      "amount": 10,
+      "totalSold": 0,
+      "jewelryImage": "diamond-studs.jpg"
+    },
+    {
+      "name": "Gold Hoop Earrings",
+      "brandName": "Mejuri",
+      "price": 150,
+      "category": "Earrings",
+      "amount": 5,
+      "totalSold": 0,
+      "jewelryImage": "hoops.jpg"
+    },
+    {
+      "name": "Pearl Drop Earrings",
+      "brandName": "Banter by Piercing Pagoda",
+      "price": 49.99,
+      "category": "Earrings",
+      "amount": 15,
+      "totalSold": 0, 
+      "jewelryImage": "pearl-drop.jpg"
+    },
+    {
+      "name": "Tassel Earrings",
+      "brandName": "Charm & Chain",
+      "price": 80,
+      "category": "Earrings",
+      "amount": 8,
+      "totalSold": 0,
+      "jewelryImage": "tassel.jpg" 
+    },
+    
+    {
+      "name": "Diamond Engagement Ring", 
+      "brandName": "Tiffany",
+      "price": 2000,
+      "category": "Rings",
+      "amount": 2,
+      "totalSold": 0,
+      "jewelryImage": "tiffany-ring.jpg"
+    },
+    {
+      "name": "Gold Band",
+      "brandName": "Cartier",
+      "price": 500,
+      "category": "Rings", 
+      "amount": 12,
+      "totalSold": 0,
+      "jewelryImage": "gold-band.jpg"
+    },
+    {
+      "name": "Emerald Ring",
+      "brandName": "Swarovski",
+      "price": 150,
+      "category": "Rings",
+      "amount": 6,
+      "totalSold": 0,
+      "jewelryImage": "emerald.jpg"
+    },
+    {
+      "name": "Opal Cocktail Ring",
+      "brandName": "Kate Spade",
+      "price": 99,
+      "category": "Rings",
+      "amount": 8,
+      "totalSold": 0,
+      "jewelryImage": "opal-ring.jpg"
+    }
+  
+  ]

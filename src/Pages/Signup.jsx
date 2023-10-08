@@ -35,25 +35,25 @@ const Signup = () => {
             };
           
 
-            fetch(`${import.meta.VITE_API_URL}`, {
-              method: "POST",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(savedUser),
-            })
-              .then((res) => res.json())
-              .then((data) => {
-                if (data.insertedId) reset();
-                toast.success("Singed up successfully", {
-                  duration: 1500,
-                  style: {
-                    background: "#E3F4F4",
-                    fontWeight: "700",
-                  },
-                });
-                navigate("/");
-              });
+            // fetch(`${import.meta.VITE_API_URL}`, {
+            //   method: "POST",
+            //   headers: {
+            //     "content-type": "application/json",
+            //   },
+            //   body: JSON.stringify(savedUser),
+            // })
+            //   .then((res) => res.json())
+            //   .then((data) => {
+            //     if (data.insertedId) reset();
+            //     toast.success("Singed up successfully", {
+            //       duration: 1500,
+            //       style: {
+            //         background: "#E3F4F4",
+            //         fontWeight: "700",
+            //       },
+            //     });
+            //     navigate("/");
+            //   });
           })
           .catch((error) => {
             console.log(error);
@@ -211,12 +211,9 @@ const Signup = () => {
               )}
             </div>
             <div className="flex items-center justify-between">
-              <button
-                className="bg-[#88d5d0] hover:bg-[#b9dbdb] text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
-              >
-                Sign In
-              </button>
+            <button className="px-5 py-2 rounded-full btn-1 text-white hover:bg-black transition tracking-wide">
+              Signin
+            </button>
             </div>
           </div>
           <p className="ml-8 pb-7 pt-2">

@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo/logo.webp";
 import UseAuth from "../../Hooks/UseAuth";
 const Navbar = () => {
-  const { user } = UseAuth();
+  const { user, logOut } = UseAuth();
   const navOptions = (
     <>
       <li className="tracking-wider text-[16px] font-medium">
@@ -15,7 +15,7 @@ const Navbar = () => {
       </li>
       <li className="tracking-wider text-[16px] font-medium">
         <NavLink
-          to="/classes"
+          to="/all-jewelries"
           className={({ isActive }) => (isActive ? "nav-text" : "")}
         >
           All Jewelry
@@ -47,6 +47,14 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleLogOUt = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   return (
     <div className="navbar pr-5 bg-[#F5F5F5] fixed z-10">
       <div className="navbar-start">
@@ -81,14 +89,14 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="group menu menu-horizontal px-1">{navOptions}</ul>
       </div>
-      {/* drop down */}
+
       <div className="navbar-end">
         {user ? (
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-16 rounded-full">
+              <div className="w-9 rounded-full">
                 <img
-                  //   src={user?.photoURL}
+                  src={user?.photoURL}
                   className="object-cover object-center"
                   alt="profile"
                 />
@@ -108,23 +116,20 @@ const Navbar = () => {
                 <a>Settings</a>
               </li>
               <li>
-                {/* {user?.displayName} <br /> {user.email} */}
-                update here
+                {user?.displayName} <br /> {user.email}
               </li>
               <div className="divider pt-0"></div>
-              <button
-                //   onClick={handleLogOUt}
-                className="btn btn-sm"
-              >
+              <button onClick={handleLogOUt} className="btn btn-sm">
                 Logout
               </button>
             </ul>
           </div>
         ) : (
           <Link to="/login">
-            <button className="px-5 py-2 rounded-full btn-1 text-white hover:bg-black transition tracking-wide">
-              Login
-            </button>
+  
+              <button className="px-5 py-2 btn-1 text-white hover:bg-black transition tracking-wide rounded-full">
+                Login
+              </button>
           </Link>
         )}
       </div>
