@@ -1,5 +1,8 @@
 import { useForm } from "react-hook-form";
 import MyContainer from "../components/shared/MyContainer";
+import UseAuth from "../Hooks/UseAuth";
+import { addJewelry } from "../api/jewelries";
+import toast from "react-hot-toast";
 
 const AddJewelry = () => {
   const {
@@ -8,9 +11,56 @@ const AddJewelry = () => {
     reset,
     formState: { errors },
   } = useForm();
+  const { user } = UseAuth();
+
   const categories = ["Earring", "Ring", "Necklace", "Bracelet"];
+  const image_hosting_token = import.meta.env.VITE_IMGBB_KEY;
+  const image_hosting_url = `https://api.imgbb.com/1/upload?&key=${image_hosting_token}`;
+
   const onSubmit = (data) => {
     console.log(data);
+
+    const formData = new FormData();
+    formData.append("image", data.jewelryImage[0]);
+
+    fetch(image_hosting_url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((imageResponse) => {
+        if (imageResponse.success) {
+          const imgURL = imageResponse.data.display_url;
+          const { name, brandName, category, amount, price } = data;
+          const newJewelry = {
+            name,
+            brandName,
+            category,
+            jewelryImage: imgURL,
+            amount: parseInt(amount),
+            price: parseFloat(price),
+            sellerName: user?.displayName || "unknown",
+            sellerEmail: user?.email || "anonymous",
+          };
+
+          addJewelry(newJewelry)
+            .then((resData) => {
+              console.log(resData);
+              if (resData.insertedId) {
+                  reset();
+                toast.success("Added successfully", {
+                  duration: 1500,
+                  style: {
+                    background: "#E3F4F4",
+                    fontWeight: "700",
+                  },
+                });
+              }
+            })
+            .catch((err) => console.log(err));
+        }
+      })
+      .catch((err) => console.log(err.message));
   };
   return (
     <MyContainer>
@@ -49,10 +99,10 @@ const AddJewelry = () => {
                   </label>
                   <input
                     type="file"
-                    {...register("image", { required: true })}
+                    {...register("jewelryImage", { required: true })}
                     className="file-input file-input-bordered w-full]"
                   />
-                  {errors.image && (
+                  {errors.jewelryImage && (
                     <span className="text-red-500">Image is required</span>
                   )}
                 </div>
@@ -72,7 +122,7 @@ const AddJewelry = () => {
                     type="text"
                     placeholder="Enter class Name"
                   />
-                  {errors.name && (
+                  {errors.brandName && (
                     <span className="text-red-500">Name is required</span>
                   )}
                 </div>
@@ -89,7 +139,6 @@ const AddJewelry = () => {
                     required
                     className="w-full px-4 py-3 border-rose-300 focus:outline-[#C29958] rounded-md"
                     name="category"
-                    defaultValue={"caategory"}
                     {...register("category", { required: true })}
                   >
                     {categories.map((category, idx) => (
@@ -116,7 +165,7 @@ const AddJewelry = () => {
                     // {...register('sellerName')}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
                     type="text"
-                    //   defaultValue={loggedUser?.name}
+                    defaultValue={user?.displayName}
                     // readOnly
                     disabled
                   />
@@ -132,7 +181,7 @@ const AddJewelry = () => {
                     // {...register('SellerEmail')}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
                     type="email"
-                    //   defaultValue={loggedUser?.email}
+                    defaultValue={user?.email}
                     // readOnly
                     disabled
                   />
@@ -143,23 +192,23 @@ const AddJewelry = () => {
                 <div className="mb-4 w-1/2">
                   <label
                     className="block text-gray-700 text-sm font-bold mb-2"
-                    htmlFor="seat"
+                    htmlFor="amount"
                   >
                     Amount
                   </label>
                   <input
-                    {...register("seat", { required: true })}
+                    {...register("amount", { required: true })}
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-lg"
                     type="text"
                   />
-                  {errors.seat && (
+                  {errors.amount && (
                     <span className="text-red-500">Required</span>
                   )}
                 </div>
                 <div className="mb-4 w-1/2">
                   <label
                     className="block text-gray-700 text-sm font-bold mb-2"
-                    htmlFor="iemail"
+                    htmlFor="price"
                   >
                     Price
                   </label>

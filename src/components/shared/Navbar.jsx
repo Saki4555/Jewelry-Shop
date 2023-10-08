@@ -97,6 +97,7 @@ const Navbar = () => {
               <div className="w-9 rounded-full">
                 <img
                   src={user?.photoURL}
+                  referrerPolicy="no-referrer"
                   className="object-cover object-center"
                   alt="profile"
                 />

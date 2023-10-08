@@ -6,7 +6,9 @@
       "category": "Earring",
       "amount": 10,
       "totalSold": 0,
-      "jewelryImage": "diamond-studs.jpg"
+      "jewelryImage": "diamond-studs.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Gold Hoop Earring",
@@ -15,7 +17,9 @@
       "category": "Earring",
       "amount": 5,
       "totalSold": 0,
-      "jewelryImage": "hoops.jpg"
+      "jewelryImage": "hoops.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Pearl Drop Earring",
@@ -24,7 +28,9 @@
       "category": "Earring",
       "amount": 15,
       "totalSold": 0, 
-      "jewelryImage": "pearl-drop.jpg"
+      "jewelryImage": "pearl-drop.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Tassel Earring",
@@ -33,7 +39,9 @@
       "category": "Earring",
       "amount": 8,
       "totalSold": 0,
-      "jewelryImage": "tassel.jpg" 
+      "jewelryImage": "tassel.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com" 
     },
     
     {
@@ -43,7 +51,9 @@
       "category": "Ring",
       "amount": 2,
       "totalSold": 0,
-      "jewelryImage": "tiffany-ring.jpg"
+      "jewelryImage": "tiffany-ring.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Gold Band",
@@ -52,7 +62,9 @@
       "category": "Ring", 
       "amount": 12,
       "totalSold": 0,
-      "jewelryImage": "gold-band.jpg"
+      "jewelryImage": "gold-band.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Emerald Ring",
@@ -61,7 +73,9 @@
       "category": "Ring",
       "amount": 6,
       "totalSold": 0,
-      "jewelryImage": "emerald.jpg"
+      "jewelryImage": "emerald.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Opal Cocktail Ring",
@@ -70,7 +84,9 @@
       "category": "Ring",
       "amount": 8,
       "totalSold": 0,
-      "jewelryImage": "opal-ring.jpg"
+      "jewelryImage": "opal-ring.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Layered Gold Necklace",
@@ -79,16 +95,20 @@
       "category": "Necklace",
       "amount": 10,
       "totalSold": 0,
-      "jewelryImage": "layered-gold.jpg" 
+      "jewelryImage": "layered-gold.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {  
       "name": "Diamond Tennis Necklace",
       "brandName": "Blue Nile",
       "price": 1999,
       "category": "Necklace",
-      "amount": 1,
+      "amount": 10,
       "totalSold": 0,
-      "jewelryImage": "diamond-tennis.jpg"
+      "jewelryImage": "diamond-tennis.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Pearl Choker Necklace",
@@ -97,7 +117,9 @@
       "category": "Necklace",
       "amount": 5,
       "totalSold": 0,
-      "jewelryImage": "pearl-choker.jpg"
+      "jewelryImage": "pearl-choker.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Crystal Pendant Necklace",
@@ -106,7 +128,9 @@
       "category": "Necklace", 
       "amount": 3,
       "totalSold": 0,
-      "jewelryImage": "crystal-pendant.jpg"
+      "jewelryImage": "crystal-pendant.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
   
     {
@@ -116,7 +140,9 @@
       "category": "Bracelet",
       "amount": 4,
       "totalSold": 0,
-      "jewelryImage": "tennis-bracelet.jpg" 
+      "jewelryImage": "tennis-bracelet.jpg" ,
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Leather Cuff Bracelet",
@@ -125,7 +151,9 @@
       "category": "Bracelet",
       "amount": 12,
       "totalSold": 0,
-      "jewelryImage": "leather-cuff.jpg"
+      "jewelryImage": "leather-cuff.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Charm Bracelet",
@@ -134,7 +162,9 @@
       "category": "Bracelet",
       "amount": 7, 
       "totalSold": 0,
-      "jewelryImage": "charm-bracelet.jpg"
+      "jewelryImage": "charm-bracelet.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     },
     {
       "name": "Gold Bangle Bracelet",
@@ -143,7 +173,9 @@
       "category": "Bracelet",
       "amount": 9,
       "totalSold": 0,
-      "jewelryImage": "bangle.jpg"
+      "jewelryImage": "bangle.jpg",
+      "sellerName": "Saki",
+      "sellerEmail": "saki@mail.com"
     }
   
   ]
