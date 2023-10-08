@@ -23,7 +23,7 @@ const Navbar = () => {
       </li>
       <li className="tracking-wider text-[16px] font-medium">
         <NavLink
-          to="/instructors"
+          to="/my-jewelries"
           className={({ isActive }) => (isActive ? "nav-text" : "")}
         >
           My Jewelry
@@ -31,7 +31,7 @@ const Navbar = () => {
       </li>
       <li className="tracking-wider text-[16px] font-medium">
         <NavLink
-          to="/instructors"
+          to="/add-jewelry"
           className={({ isActive }) => (isActive ? "nav-text" : "")}
         >
           Add Jewelry
