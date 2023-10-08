@@ -1,12 +1,20 @@
+export const getAllJewelries = async () => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/jewelries`);
+  const data = await response.json();
+  return data;
+};
+
 export const addJewelry = async (newJewelry) => {
-    console.log(newJewelry);
-  const res = await fetch(`${import.meta.env.VITE_API_URL}/jewelries`,{
+  console.log(newJewelry);
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/jewelries`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
     },
-    body: JSON.stringify(newJewelry)
+    body: JSON.stringify(newJewelry),
   });
-  const data = res.json();
-  return data ;
+  const data = await res.json();
+  return data;
 };
+
+

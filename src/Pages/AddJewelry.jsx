@@ -41,6 +41,7 @@ const AddJewelry = () => {
             price: parseFloat(price),
             sellerName: user?.displayName || "unknown",
             sellerEmail: user?.email || "anonymous",
+            totalSold: 0,
           };
 
           addJewelry(newJewelry)

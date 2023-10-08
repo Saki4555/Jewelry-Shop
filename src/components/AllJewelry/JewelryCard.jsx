@@ -1,5 +1,17 @@
+import { addToCart } from "../../api/cart";
 import demo from "../../assets/products/demo.webp";
 const JewelryCard = ({ item }) => {
+  console.log(item.totalSold);
+  const handleAddToCart = () => {
+    const { name, brandName, category, amount, price, jewelryImage,sellerEmail, sellerName, totalSold  } = item;
+    const jewelry = {name, brandName, category, amount, price, jewelryImage, sellerName, sellerEmail, totalSold};
+    // console.log({jewelry});
+    // addToCart()
+    //   .then((cartData) => {
+    //     console.log(cartData);
+    //   })
+    //   .catch((err) => console.log(err));
+  };
   return (
     <div className="group">
       <div className="px-2 md:px-0 w-full relative">
@@ -17,14 +29,17 @@ const JewelryCard = ({ item }) => {
           alt=""
         />
         <div className="-mt-9 flex justify-center items-center h-6">
-          <button className="hidden px-4 py-1.5 text-black group-hover:block bg-white hover:bg-[#C29958] hover:text-white rounded-full drop-shadow-lg">
-           Add to Cart
+          <button
+            onClick={handleAddToCart}
+            className="hidden px-4 py-1.5 text-black group-hover:block bg-white hover:bg-[#C29958] hover:text-white rounded-full drop-shadow-lg"
+          >
+            Add to Cart
           </button>
         </div>
       </div>
       <div className="text-center py-6 tracking-wider">
         <p className="text-sm">{item?.brandName}</p>
-        <h5 className="font-medium">{item.name}</h5>
+        <h5 className="font-medium">{item?.name}</h5>
         <p className="text-[#C29958]">${item?.price}</p>
       </div>
     </div>

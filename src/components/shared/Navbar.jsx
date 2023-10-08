@@ -120,17 +120,21 @@ const Navbar = () => {
                 {user?.displayName} <br /> {user.email}
               </li>
               <div className="divider pt-0"></div>
-              <button onClick={handleLogOUt} className="btn btn-sm">
-                Logout
-              </button>
+
+                <Link to="/dashboard">
+                  <button className="btn btn-sm mb-2 w-full">Dashboard</button>
+                </Link>
+                <button onClick={handleLogOUt} className="btn btn-sm">
+                  Logout
+                </button>
+            
             </ul>
           </div>
         ) : (
           <Link to="/login">
-  
-              <button className="px-5 py-2 btn-1 text-white hover:bg-black transition tracking-wide rounded-full">
-                Login
-              </button>
+            <button className="px-5 py-2 btn-1 text-white hover:bg-black transition tracking-wide rounded-full">
+              Login
+            </button>
           </Link>
         )}
       </div>

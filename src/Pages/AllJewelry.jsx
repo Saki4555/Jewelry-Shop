@@ -2,30 +2,28 @@ import { Tab } from "@headlessui/react";
 import { useEffect, useState } from "react";
 import JewelryCard from "../components/AllJewelry/JewelryCard";
 import MyContainer from "../components/shared/MyContainer";
+import { getAllJewelries } from "../api/jewelries";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function AllJewelry() {
-  const [data, setData] = useState();
-  const [toFilter, setToFilter] = useState("Earrings");
+  const [jewelries, setJewelries] = useState();
+  const [toFilter, setToFilter] = useState("Earring");
   const [categoryData, setCategoryData] = useState();
 
   useEffect(() => {
-    fetch("./fakeData.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-      });
+    getAllJewelries()
+      .then((jewelryData) => setJewelries(jewelryData))
+      .catch((err) => console.log(err.message));
   }, []);
 
   useEffect(() => {
-    const filteredData = data?.filter((item) => item.category === toFilter);
-    console.log(filteredData);
+    const filteredData = jewelries?.filter((item) => item.category === toFilter);
+  
     setCategoryData(filteredData);
-  }, [data, toFilter]);
+  }, [jewelries, toFilter]);
   return (
     <MyContainer>
       {" "}

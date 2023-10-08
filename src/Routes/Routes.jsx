@@ -6,6 +6,8 @@ import Signup from "../Pages/Signup";
 import AllJewelry from "../Pages/AllJewelry";
 import MyJewelries from "../Pages/MyJewelries";
 import AddJewelry from "../Pages/AddJewelry";
+import DashboardLayout from "../DashboardLayout/DashboardLayout";
+import MyCart from "../Pages/Dashboard/MyCart";
 
 const router = createBrowserRouter([
   {
@@ -38,5 +40,15 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: '/dashboard',
+    element: <DashboardLayout></DashboardLayout>,
+    children: [
+      {
+        path: '/dashboard/my-cart',
+        element: <MyCart></MyCart>
+      }
+    ]
+  }
 ]);
 export default router;
