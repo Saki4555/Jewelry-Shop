@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../assets/logo/logo.webp';
+import logo from "../../assets/logo/logo.webp";
+import UseAuth from "../../Hooks/UseAuth";
 const Navbar = () => {
+  const { user } = UseAuth();
   const navOptions = (
     <>
       <li className="tracking-wider text-[16px] font-medium">
@@ -72,11 +74,8 @@ const Navbar = () => {
             {navOptions}
           </ul>
         </div>
-        <Link
-            to="/"
-          className="btn btn-ghost normal-case text-sm lg:text-2xl"
-        >
-         <img src={logo} alt="" />
+        <Link to="/" className="btn btn-ghost normal-case text-sm lg:text-2xl">
+          <img src={logo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -84,43 +83,50 @@ const Navbar = () => {
       </div>
       {/* drop down */}
       <div className="navbar-end">
-        <button className="px-5 py-2 rounded-full btn-1 text-white hover:bg-black">Login</button>
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-16 rounded-full">
-              <img
-                //   src={user?.photoURL}
-                className="object-cover object-center"
-                alt="profile"
-              />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="mt-3 p-4 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-          >
-            <li className="hidden">
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li className="hidden">
-              <a>Settings</a>
-            </li>
-            <li>
-              {/* {user?.displayName} <br /> {user.email} */}
-              update here
-            </li>
-            <div className="divider pt-0"></div>
-            <button
-              //   onClick={handleLogOUt}
-              className="btn btn-sm"
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-16 rounded-full">
+                <img
+                  //   src={user?.photoURL}
+                  className="object-cover object-center"
+                  alt="profile"
+                />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 p-4 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
             >
-              Logout
+              <li className="hidden">
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li className="hidden">
+                <a>Settings</a>
+              </li>
+              <li>
+                {/* {user?.displayName} <br /> {user.email} */}
+                update here
+              </li>
+              <div className="divider pt-0"></div>
+              <button
+                //   onClick={handleLogOUt}
+                className="btn btn-sm"
+              >
+                Logout
+              </button>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="px-5 py-2 rounded-full btn-1 text-white hover:bg-black transition tracking-wide">
+              Login
             </button>
-          </ul>
-        </div>
+          </Link>
+        )}
       </div>
     </div>
   );

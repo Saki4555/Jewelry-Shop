@@ -97,7 +97,7 @@ const Login = () => {
             <div className="flex items-center justify-between">
               <button
                 
-                className="bg-[#88d5d0] hover:bg-[#b9dbdb] text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-1 text-white hover:bg-black transition font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
               >
                 Sign In
@@ -109,7 +109,7 @@ const Login = () => {
             New Here?{" "}
             <Link to="/signup">
               <span className="text-yellow-600 hover:text-blue-950">
-                Create an LiguaLodge account
+                Create an Corano account
               </span>
             </Link>
           </p>
