@@ -13,7 +13,7 @@ const MyJewelries = () => {
       console.log(sellerData);
       setMyJewelries(sellerData);
     });
-  }, [user]);
+  }, [user.email]);
   return (
     <MyContainer>
       <div className="overflow-x-auto pt-28 pb-14">

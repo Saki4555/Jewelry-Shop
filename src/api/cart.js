@@ -8,3 +8,10 @@ export const addToCart = async (jewelry ) => {
   });
   return await res.json();
 };
+
+export const getCartJewelries = async (email) => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/cart/${email}`);
+  const data = await response.json();
+  return data;
+};
+
