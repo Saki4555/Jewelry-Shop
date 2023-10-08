@@ -3,34 +3,34 @@
       "name": "Diamond Studs",
       "brandName": "Brilliant Earth", 
       "price": 299.99,
-      "category": "Earrings",
+      "category": "Earring",
       "amount": 10,
       "totalSold": 0,
       "jewelryImage": "diamond-studs.jpg"
     },
     {
-      "name": "Gold Hoop Earrings",
+      "name": "Gold Hoop Earring",
       "brandName": "Mejuri",
       "price": 150,
-      "category": "Earrings",
+      "category": "Earring",
       "amount": 5,
       "totalSold": 0,
       "jewelryImage": "hoops.jpg"
     },
     {
-      "name": "Pearl Drop Earrings",
+      "name": "Pearl Drop Earring",
       "brandName": "Banter by Piercing Pagoda",
       "price": 49.99,
-      "category": "Earrings",
+      "category": "Earring",
       "amount": 15,
       "totalSold": 0, 
       "jewelryImage": "pearl-drop.jpg"
     },
     {
-      "name": "Tassel Earrings",
+      "name": "Tassel Earring",
       "brandName": "Charm & Chain",
       "price": 80,
-      "category": "Earrings",
+      "category": "Earring",
       "amount": 8,
       "totalSold": 0,
       "jewelryImage": "tassel.jpg" 
@@ -40,7 +40,7 @@
       "name": "Diamond Engagement Ring", 
       "brandName": "Tiffany",
       "price": 2000,
-      "category": "Rings",
+      "category": "Ring",
       "amount": 2,
       "totalSold": 0,
       "jewelryImage": "tiffany-ring.jpg"
@@ -49,7 +49,7 @@
       "name": "Gold Band",
       "brandName": "Cartier",
       "price": 500,
-      "category": "Rings", 
+      "category": "Ring", 
       "amount": 12,
       "totalSold": 0,
       "jewelryImage": "gold-band.jpg"
@@ -58,7 +58,7 @@
       "name": "Emerald Ring",
       "brandName": "Swarovski",
       "price": 150,
-      "category": "Rings",
+      "category": "Ring",
       "amount": 6,
       "totalSold": 0,
       "jewelryImage": "emerald.jpg"
@@ -67,10 +67,83 @@
       "name": "Opal Cocktail Ring",
       "brandName": "Kate Spade",
       "price": 99,
-      "category": "Rings",
+      "category": "Ring",
       "amount": 8,
       "totalSold": 0,
       "jewelryImage": "opal-ring.jpg"
+    },
+    {
+      "name": "Layered Gold Necklace",
+      "brandName": "Gorjana",  
+      "price": 120,
+      "category": "Necklace",
+      "amount": 10,
+      "totalSold": 0,
+      "jewelryImage": "layered-gold.jpg" 
+    },
+    {  
+      "name": "Diamond Tennis Necklace",
+      "brandName": "Blue Nile",
+      "price": 1999,
+      "category": "Necklace",
+      "amount": 1,
+      "totalSold": 0,
+      "jewelryImage": "diamond-tennis.jpg"
+    },
+    {
+      "name": "Pearl Choker Necklace",
+      "brandName": "Banana Republic",
+      "price": 49.50,
+      "category": "Necklace",
+      "amount": 5,
+      "totalSold": 0,
+      "jewelryImage": "pearl-choker.jpg"
+    },
+    {
+      "name": "Crystal Pendant Necklace",
+      "brandName": "Swarovski",
+      "price": 129,
+      "category": "Necklace", 
+      "amount": 3,
+      "totalSold": 0,
+      "jewelryImage": "crystal-pendant.jpg"
+    },
+  
+    {
+      "name": "Tennis Bracelet",
+      "brandName": "Pandora",
+      "price": 180,
+      "category": "Bracelet",
+      "amount": 4,
+      "totalSold": 0,
+      "jewelryImage": "tennis-bracelet.jpg" 
+    },
+    {
+      "name": "Leather Cuff Bracelet",
+      "brandName": "Fossil",
+      "price": 45,
+      "category": "Bracelet",
+      "amount": 12,
+      "totalSold": 0,
+      "jewelryImage": "leather-cuff.jpg"
+    },
+    {
+      "name": "Charm Bracelet",
+      "brandName": "Links of London",
+      "price": 195,
+      "category": "Bracelet",
+      "amount": 7, 
+      "totalSold": 0,
+      "jewelryImage": "charm-bracelet.jpg"
+    },
+    {
+      "name": "Gold Bangle Bracelet",
+      "brandName": "Michael Kors",
+      "price": 125,
+      "category": "Bracelet",
+      "amount": 9,
+      "totalSold": 0,
+      "jewelryImage": "bangle.jpg"
     }
   
   ]
