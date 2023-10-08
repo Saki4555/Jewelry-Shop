@@ -8,6 +8,7 @@ import MyJewelries from "../Pages/MyJewelries";
 import AddJewelry from "../Pages/AddJewelry";
 import DashboardLayout from "../DashboardLayout/DashboardLayout";
 import MyCart from "../Pages/Dashboard/MyCart";
+import PrivateRoute from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/my-jewelries',
-        element: <MyJewelries></MyJewelries>
+        element: <PrivateRoute><MyJewelries></MyJewelries></PrivateRoute>
       },
       {
         path: '/add-jewelry',
-        element: <AddJewelry></AddJewelry>
+        element: <PrivateRoute><AddJewelry></AddJewelry></PrivateRoute>
       }
     ],
   },

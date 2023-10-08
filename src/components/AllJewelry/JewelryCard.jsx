@@ -1,57 +1,70 @@
 import toast from "react-hot-toast";
 import { addToCart } from "../../api/cart";
 import demo from "../../assets/products/demo.webp";
+import UseAuth from "../../Hooks/UseAuth";
+import { useState } from "react";
+import CheckSignedModal from "../../Modals/CheckSignedModal";
 
 const JewelryCard = ({ item }) => {
+  const { user } = UseAuth();
+  const [ isOpen, setIsOpen] = useState(false);
   const handleAddToCart = () => {
-    const {
-      name,
-      brandName,
-      category,
-      amount,
-      price,
-      jewelryImage,
-      sellerEmail,
-      sellerName,
-      totalSold,
-      _id,
-    } = item;
-    const jewelry = {
-      name,
-      brandName,
-      category,
-      amount,
-      price,
-      jewelryImage,
-      sellerName,
-      sellerEmail,
-      totalSold,
-      id: _id,
-    };
+    if (user && user.email) {
+      const {
+        name,
+        brandName,
+        category,
+       
+        amount,
+        price,
+        jewelryImage,
+        sellerEmail,
+        sellerName,
+        totalSold,
+        _id,
+      } = item;
+      const jewelry = {
+        name,
+        brandName,
+        category,
+        customerName: user.displayName,
+        customerEmail: user.email,
+        amount,
+        price,
+        jewelryImage,
+        sellerName,
+        sellerEmail,
+        totalSold,
+        id: _id,
+      };
 
-    // console.log(jewelry);
-    addToCart(jewelry)
-      .then((cartData) => {
-        console.log(cartData);
-        if (cartData.upsertedCount) {
-          toast.success("Added to Cart Successfully");
-          return;
-        }
-        if (cartData.matchedCount) {
-          toast.success("This jewelry is already in your cart.", {
-            style: {
-              border: "1px solid #713200",
-              padding: "10px",
-              color: "#713200",
-            },
-            iconTheme: {
-              primary: "#713200",
-              secondary: "#FFFAEE",
-            },
-          });
-        }
-      })
-      .catch((err) => console.log(err));
+      // console.log(jewelry);
+      addToCart(jewelry)
+        .then((cartData) => {
+          console.log(cartData);
+          if (cartData.upsertedCount) {
+            toast.success("Added to Cart Successfully");
+            return;
+          }
+          if (cartData.matchedCount) {
+            toast.success("This jewelry is already in your cart.", {
+              style: {
+                border: "1px solid #713200",
+                padding: "10px",
+                color: "#713200",
+              },
+              iconTheme: {
+                primary: "#713200",
+                secondary: "#FFFAEE",
+              },
+            });
+          }
+        })
+        .catch((err) => console.log(err));
+    }
+    else{
+      setIsOpen(true);
+    }
   };
   return (
     <div className="group">
@@ -77,6 +90,7 @@ const JewelryCard = ({ item }) => {
             Add to Cart
           </button>
         </div>
+        <CheckSignedModal isOpen={isOpen} setIsOpen={setIsOpen}></CheckSignedModal>
       </div>
       <div className="text-center py-6 tracking-wider">
         <p className="text-sm">{item?.brandName}</p>
