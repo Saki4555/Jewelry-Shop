@@ -5,8 +5,13 @@ import "swiper/css/navigation";
 
 import { Navigation} from "swiper/modules";
 import FeaturedProductCard from "./FeaturedProductCard";
+import { useContext } from "react";
+import { JewelryDataContext } from "../../../providers/JewelryDataProvider";
+import JewelryCard from "../../AllJewelry/JewelryCard";
 
 const FeaturedProducts = () => {
+  const {jewelries, jewelryLoading } = useContext(JewelryDataContext);
+
   return (
     <>
       <MyContainer>
@@ -36,9 +41,9 @@ const FeaturedProducts = () => {
           modules={[Navigation]}
           className="mySwiper"
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, idx) => (
-            <SwiperSlide key={idx}>
-              <FeaturedProductCard></FeaturedProductCard>
+          {jewelries.map((item) => (
+            <SwiperSlide key={item._id}>
+             <JewelryCard item={item}></JewelryCard>
             </SwiperSlide>
           ))}
         </Swiper>

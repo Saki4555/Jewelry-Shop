@@ -1,8 +1,9 @@
 import { Tab } from "@headlessui/react";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import JewelryCard from "../components/AllJewelry/JewelryCard";
 import MyContainer from "../components/shared/MyContainer";
-import { getAllJewelries } from "../api/jewelries";
+import { JewelryDataContext } from "../providers/JewelryDataProvider";
+import Loader from "../components/shared/Loader";
 
 
 function classNames(...classes) {
@@ -10,23 +11,33 @@ function classNames(...classes) {
 }
 
 export default function AllJewelry() {
-  const [jewelries, setJewelries] = useState();
-  const [toFilter, setToFilter] = useState("Earring");
-  const [categoryData, setCategoryData] = useState();
 
-  useEffect(() => {
-    getAllJewelries()
-      .then((jewelryData) => setJewelries(jewelryData))
-      .catch((err) => console.log(err.message));
-  }, []);
 
-  useEffect(() => {
-    const filteredData = jewelries?.filter(
-      (item) => item.category === toFilter
-    );
+    const { categoryData, setToFilter, jewelryLoading } = useContext(JewelryDataContext);
 
-    setCategoryData(filteredData);
-  }, [jewelries, toFilter]);
+
+    if(jewelryLoading){
+      return <Loader></Loader>
+    }
+
+
+  // const [jewelries, setJewelries] = useState();
+  // const [toFilter, setToFilter] = useState("Earring");
+  // const [categoryData, setCategoryData] = useState();
+
+  // useEffect(() => {
+  //   getAllJewelries()
+  //     .then((jewelryData) => setJewelries(jewelryData))
+  //     .catch((err) => console.log(err.message));
+  // }, []);
+
+  // useEffect(() => {
+  //   const filteredData = jewelries?.filter(
+  //     (item) => item.category === toFilter
+  //   );
+
+  //   setCategoryData(filteredData);
+  // }, [jewelries, toFilter]);
 
   return (
     <>

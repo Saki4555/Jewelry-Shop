@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import UseAuth from "../Hooks/UseAuth";
 import { getSellerJewelries } from "../api/jewelries";
 import MyContainer from "../components/shared/MyContainer";
-import demo from '../assets/products/demo.webp'
 
 const MyJewelries = () => {
   const { user } = UseAuth();
@@ -38,7 +37,7 @@ const MyJewelries = () => {
                         <div className="avatar">
                           <div className="mask mask-squircle w-12 h-12">
                             <img
-                              src={demo}
+                              src={item?.jewelryImage}
                               alt="jewelry"
                             />
                           </div>
@@ -50,8 +49,8 @@ const MyJewelries = () => {
                      {item.name}
                     </td>
                     <td>{item.brandName}</td>
-                    <td>{item.price}</td>
-                    <td>{item.amount}</td>
+                    <td className="text-[#C29958]">${item.price}</td>
+                    <td className="text-green-600">{item.amount}</td>
                   </tr>)
             }
            

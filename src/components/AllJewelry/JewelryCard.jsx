@@ -1,6 +1,5 @@
 import toast from "react-hot-toast";
 import { addToCart } from "../../api/cart";
-import demo from "../../assets/products/demo.webp";
 import UseAuth from "../../Hooks/UseAuth";
 import { useState } from "react";
 import CheckSignedModal from "../../Modals/CheckSignedModal";
@@ -78,7 +77,7 @@ const JewelryCard = ({ item }) => {
           </div>
         </div>
         <img
-          src={demo}
+          src={item?.jewelryImage}
           className="object-cover object-center transition"
           alt=""
         />
