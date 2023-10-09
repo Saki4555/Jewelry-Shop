@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react";
 import UseAuth from "../../Hooks/UseAuth";
 import { getCartJewelries } from "../../api/cart";
+import Loader from "../../components/shared/Loader";
 
 
 const MyCart = () => {
     const { user } = UseAuth();
     const [ selectedJewelries, setSelectedJewelries] = useState([]);
+    const [ loading, setLoading ] = useState(false);
   
     useEffect(() => {
-      getCartJewelries(user.email).then(( cartData) => {
+      setLoading(true);
+      getCartJewelries(user?.email).then(( cartData) => {
         console.log(cartData);
         setSelectedJewelries(cartData);
+        setLoading(false);
       });
-    }, [user.email]);
+    }, [user?.email]);
+
+  if(loading){
+    return <Loader></Loader>
+  }
+
     return (
         <div className="overflow-x-auto px-10 pt-10 pb-14">
         <table className="table">
@@ -36,7 +45,7 @@ const MyCart = () => {
                         <div className="avatar">
                           <div className="mask mask-squircle w-12 h-12">
                             <img
-                              src=''
+                              src={item?.jewelryImage}
                               alt="jewelry"
                             />
                           </div>

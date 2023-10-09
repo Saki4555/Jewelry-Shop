@@ -39,7 +39,7 @@ const Navbar = () => {
       </li>
       <li className="tracking-wider text-[16px] font-medium">
         <NavLink
-          to="/instructors"
+          to="/blogs"
           className={({ isActive }) => (isActive ? "nav-text" : "")}
         >
           Blogs
@@ -117,7 +117,7 @@ const Navbar = () => {
                 <a>Settings</a>
               </li>
               <li>
-                {user?.displayName} <br /> {user.email}
+                {user?.displayName} <br /> {user?.email}
               </li>
               <div className="divider pt-0"></div>
 

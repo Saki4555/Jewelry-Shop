@@ -9,6 +9,7 @@ import AddJewelry from "../Pages/AddJewelry";
 import DashboardLayout from "../DashboardLayout/DashboardLayout";
 import MyCart from "../Pages/Dashboard/MyCart";
 import PrivateRoute from "./PrivateRoutes";
+import Blogs from "../Pages/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/add-jewelry',
         element: <PrivateRoute><AddJewelry></AddJewelry></PrivateRoute>
+      },
+      {
+        path: '/blogs',
+        element: <Blogs></Blogs>
       }
     ],
   },

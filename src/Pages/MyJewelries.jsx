@@ -2,17 +2,27 @@ import { useEffect, useState } from "react";
 import UseAuth from "../Hooks/UseAuth";
 import { getSellerJewelries } from "../api/jewelries";
 import MyContainer from "../components/shared/MyContainer";
+import Loader from "../components/shared/Loader";
 
 const MyJewelries = () => {
   const { user } = UseAuth();
   const [myJewelries, setMyJewelries] = useState([]);
+  const [ loading, setLoading ] = useState(false);
+  console.log(loading);
 
   useEffect(() => {
-    getSellerJewelries(user.email).then((sellerData) => {
+    setLoading(true);
+    getSellerJewelries(user?.email).then((sellerData) => {
       console.log(sellerData);
       setMyJewelries(sellerData);
+      setLoading(false);
     });
-  }, [user.email]);
+  }, [user?.email]);
+
+
+  if(loading){
+    return <Loader></Loader>
+  }
   return (
     <MyContainer>
       <div className="overflow-x-auto pt-28 pb-14">
