@@ -78,13 +78,15 @@ const JewelryCard = ({ item }) => {
         </div>
         <img
           src={item?.jewelryImage}
-          className="object-cover object-center transition"
+          className="object-cover object-center w-full h-60 transition"
           alt=""
         />
         <div className="-mt-9 flex justify-center items-center h-6">
           <button
             onClick={handleAddToCart}
-            className="hidden px-4 py-1.5 text-black group-hover:block bg-white hover:bg-[#C29958] hover:text-white rounded-full drop-shadow-lg"
+            disabled = { item?.sellerEmail === user?.email}
+            type="button"
+            className={item?.sellerEmail === user?.email ? "bg-gray-200 hidden px-4 py-1.5 text-black font-medium group-hover:block rounded-full drop-shadow-lg text-white" : "hidden px-4 py-1.5 text-black font-medium group-hover:block bg-white hover:bg-[#C29958] hover:text-white rounded-full drop-shadow-lg"}
           >
             Add to Cart
           </button>

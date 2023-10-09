@@ -3,14 +3,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Navigation} from "swiper/modules";
-import FeaturedProductCard from "./FeaturedProductCard";
+import { Navigation } from "swiper/modules";
 import { useContext } from "react";
 import { JewelryDataContext } from "../../../providers/JewelryDataProvider";
 import JewelryCard from "../../AllJewelry/JewelryCard";
 
+import Loader from "../../shared/Loader";
 const FeaturedProducts = () => {
-  const {jewelries, jewelryLoading } = useContext(JewelryDataContext);
+  const { jewelries, jewelryLoading } = useContext(JewelryDataContext);
+
+
+  if (jewelryLoading) {
+    <Loader></Loader>
+  }
 
   return (
     <>
@@ -24,9 +29,8 @@ const FeaturedProducts = () => {
         </div>
         <Swiper
           slidesPerView={1}
-          spaceBetween={20}
+          spaceBetween={30}
           navigation={true}
-          
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -43,7 +47,7 @@ const FeaturedProducts = () => {
         >
           {jewelries.map((item) => (
             <SwiperSlide key={item._id}>
-             <JewelryCard item={item}></JewelryCard>
+              <JewelryCard item={item}></JewelryCard>
             </SwiperSlide>
           ))}
         </Swiper>

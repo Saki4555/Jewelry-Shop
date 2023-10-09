@@ -7,7 +7,7 @@ const Loader = () => {
       h-[70vh]
       flex 
       flex-col 
-      justify-center 
+      justify-center
       items-center 
     '
     >
