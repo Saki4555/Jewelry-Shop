@@ -2,6 +2,8 @@
 
 Corano is an online jewelry shop application that provides a seamless and secure shopping experience for both customers and administrators. This README file outlines the key features and functionalities of the Corano Jewelry Shop application.
 
+[Live Site](https://simple-jewelry-shop.web.app)
+
 ## Features
 
 ### User Authentication
