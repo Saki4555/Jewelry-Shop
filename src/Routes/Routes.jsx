@@ -10,11 +10,13 @@ import DashboardLayout from "../DashboardLayout/DashboardLayout";
 import MyCart from "../Pages/Dashboard/MyCart";
 import PrivateRoute from "./PrivateRoutes";
 import Blogs from "../Pages/Blogs";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

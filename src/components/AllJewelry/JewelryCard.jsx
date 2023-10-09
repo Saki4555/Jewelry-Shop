@@ -94,7 +94,14 @@ const JewelryCard = ({ item }) => {
         <CheckSignedModal isOpen={isOpen} setIsOpen={setIsOpen}></CheckSignedModal>
       </div>
       <div className="text-center py-6 tracking-wider">
+        
         <p className="text-sm">{item?.brandName}</p>
+        <div className="flex gap-1.5 justify-center items-center p-2">
+         <div className="w-3 h-3  bg-sky-200 rounded-full"></div>
+         <div className="w-3 h-3 bg-yellow-600/60 rounded-full"></div>
+         <div className="w-3 h-3 bg-gray-500/70 rounded-full"></div>
+         <div className="w-3 h-3 bg-orange-800/80 rounded-full"></div>
+        </div>
         <h5 className="font-medium">{item?.name}</h5>
         <p className="text-[#C29958]">${item?.price}</p>
       </div>
