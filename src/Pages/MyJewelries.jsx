@@ -17,9 +17,9 @@ const MyJewelries = () => {
   return (
     <MyContainer>
       <div className="overflow-x-auto pt-28 pb-14">
-        <table className="table">
+        <table className="table table-zebra">
           {/* head */}
-          <thead>
+          <thead className="text-[15px] text-black">
             <tr>
                 <th>Image</th>
               <th>Name</th>

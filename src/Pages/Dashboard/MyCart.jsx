@@ -18,7 +18,7 @@ const MyCart = () => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="text-[15px] text-black">
                 <th>Image</th>
               <th>Name</th>
               <th>BrandName</th>
