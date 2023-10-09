@@ -5,6 +5,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import SocialLogin from "../components/shared/SocialLogin";
 import UseAuth from "../Hooks/UseAuth";
+import { saveUser } from "../api/auth";
 // import axios from 'axios';
 
 const Signup = () => {
@@ -19,41 +20,32 @@ const Signup = () => {
 
   const navigate = useNavigate();
   const [visible, setVisible] = useState(false);
+  const from = location.state?.from?.pathname || '/'
 
   const onSubmit = (data) => {
     // console.log(data);
     createUser(data.email, data.password)
-      .then(() => {
+      .then((result) => {
         // const user = result.user;
         // console.log(user);
         updateUserProfile(data.name, data.PhotoUrl)
           .then(() => {
-            const savedUser = {
-              name: data.name,
-              email: data.email,
-              image: data.PhotoUrl,
-            };
-          
-
-            // fetch(`${import.meta.VITE_API_URL}`, {
-            //   method: "POST",
-            //   headers: {
-            //     "content-type": "application/json",
-            //   },
-            //   body: JSON.stringify(savedUser),
-            // })
-            //   .then((res) => res.json())
-            //   .then((data) => {
-            //     if (data.insertedId) reset();
-            //     toast.success("Singed up successfully", {
-            //       duration: 1500,
-            //       style: {
-            //         background: "#E3F4F4",
-            //         fontWeight: "700",
-            //       },
-            //     });
-            //     navigate("/");
-            //   });
+            saveUser(result.user)
+            .then((data) => {
+              // console.log(data);
+              if (data.upsertedCount)
+              reset();
+                toast.success("Singed up successfully", {
+                  duration: 3000,
+                  style: {
+                    background: "#E3F4F4",
+                    fontWeight: "700",
+                  },
+                });
+              navigate(from, { replace: true });
+            })
+            .catch((err) => console.log(err.message));
+            
           })
           .catch((error) => {
             console.log(error);

@@ -6,7 +6,7 @@
       "category": "Earring",
       "amount": 10,
       "totalSold": 0,
-      "jewelryImage": "diamond-studs.jpg",
+      "jewelryImage": "https://i.ibb.co/k6KVxR9/ear4.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -17,7 +17,7 @@
       "category": "Earring",
       "amount": 5,
       "totalSold": 0,
-      "jewelryImage": "hoops.jpg",
+      "jewelryImage": "https://i.ibb.co/YyVqk8N/ear3.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -28,7 +28,7 @@
       "category": "Earring",
       "amount": 15,
       "totalSold": 0, 
-      "jewelryImage": "pearl-drop.jpg",
+      "jewelryImage": "https://i.ibb.co/gF7JYnr/ear1.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -39,7 +39,7 @@
       "category": "Earring",
       "amount": 8,
       "totalSold": 0,
-      "jewelryImage": "tassel.jpg",
+      "jewelryImage": "https://i.ibb.co/sQLkFkn/ear2.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com" 
     },
@@ -51,7 +51,7 @@
       "category": "Ring",
       "amount": 2,
       "totalSold": 0,
-      "jewelryImage": "tiffany-ring.jpg",
+      "jewelryImage": "https://ibb.co/bLpfC1L",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -62,7 +62,7 @@
       "category": "Ring", 
       "amount": 12,
       "totalSold": 0,
-      "jewelryImage": "gold-band.jpg",
+      "jewelryImage": "https://i.ibb.co/kBHp5DR/ring1.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -73,7 +73,7 @@
       "category": "Ring",
       "amount": 6,
       "totalSold": 0,
-      "jewelryImage": "emerald.jpg",
+      "jewelryImage": "https://i.ibb.co/y0sMzdy/ring2.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -84,7 +84,7 @@
       "category": "Ring",
       "amount": 8,
       "totalSold": 0,
-      "jewelryImage": "opal-ring.jpg",
+      "jewelryImage": "https://i.ibb.co/Z1btmDH/ring4.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -95,7 +95,7 @@
       "category": "Necklace",
       "amount": 10,
       "totalSold": 0,
-      "jewelryImage": "layered-gold.jpg",
+      "jewelryImage": "https://i.ibb.co/YfvJc3D/necklace1.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -106,7 +106,7 @@
       "category": "Necklace",
       "amount": 10,
       "totalSold": 0,
-      "jewelryImage": "diamond-tennis.jpg",
+      "jewelryImage": "https://i.ibb.co/qYmh9pz/necklace2.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -117,7 +117,7 @@
       "category": "Necklace",
       "amount": 5,
       "totalSold": 0,
-      "jewelryImage": "pearl-choker.jpg",
+      "jewelryImage": "https://i.ibb.co/zGdWK2f/necklace4.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -128,7 +128,7 @@
       "category": "Necklace", 
       "amount": 3,
       "totalSold": 0,
-      "jewelryImage": "crystal-pendant.jpg",
+      "jewelryImage": "https://i.ibb.co/n13dbPp/necklace3.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -140,7 +140,7 @@
       "category": "Bracelet",
       "amount": 4,
       "totalSold": 0,
-      "jewelryImage": "tennis-bracelet.jpg" ,
+      "jewelryImage": "https://i.ibb.co/C5r38WQ/bracelet2.jpg" ,
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -151,7 +151,7 @@
       "category": "Bracelet",
       "amount": 12,
       "totalSold": 0,
-      "jewelryImage": "leather-cuff.jpg",
+      "jewelryImage": "https://i.ibb.co/6XyqbLq/bracelet4.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -162,7 +162,7 @@
       "category": "Bracelet",
       "amount": 7, 
       "totalSold": 0,
-      "jewelryImage": "charm-bracelet.jpg",
+      "jewelryImage": "https://i.ibb.co/b2y1CZZ/bracelet3.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     },
@@ -173,7 +173,7 @@
       "category": "Bracelet",
       "amount": 9,
       "totalSold": 0,
-      "jewelryImage": "bangle.jpg",
+      "jewelryImage": "https://i.ibb.co/BVBxkjK/bracelet1.webp",
       "sellerName": "Saki",
       "sellerEmail": "saki@mail.com"
     }
